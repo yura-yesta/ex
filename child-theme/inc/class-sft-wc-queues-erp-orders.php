@@ -4,7 +4,7 @@
 class SFT_WC_Queues_Erp_Orders{
 
     public static array  $data          = [];
-    public static string $table         = 'wp_enapps_manage_false_orders';
+    public static string $table         = 'wp_manage_false_orders';
     public static int    $sleep_timeout = 5;
     public static int    $attempts      = 3;
     public static int    $run_interval  = 20;
