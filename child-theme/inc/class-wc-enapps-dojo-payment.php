@@ -1,6 +1,6 @@
 <?php
 
-class WC_Enapps_Dojo_Payment{
+class WC_Dojo_Payment{
 
     public static string $sk = DOJO_KEY;
 
