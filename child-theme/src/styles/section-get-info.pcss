@@ -1,0 +1,145 @@
+@import "styles/variables.pcss";
+
+.section-get-info {
+	padding-top: 40px;
+	margin-bottom: 0;
+
+	@media (--tablet-landscape-or-more) {
+		padding-top: 120px;
+		margin-bottom: -32px;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		.image {
+			order: 1;
+			width: 100%;
+			margin-bottom: 30px;
+			text-align: center;
+
+			@media (--tablet-landscape-or-more) {
+				text-align: left;
+				width: 48.8%;
+				margin-bottom: 120px;
+			}
+		}
+
+		.text {
+			order: 2;
+			width: 100%;
+			margin-bottom: 20px;
+
+			@media (--tablet-landscape-or-more) {
+				width: 48%;
+				margin-bottom: 120px;
+			}
+
+			.title {
+				font-size: 45px;
+				line-height: 28px;
+				margin-bottom: 20px;
+
+				span {
+					color: #1cb7bb;
+					display: block;
+					position: relative;
+					z-index: 2;
+					font-size: 45px;
+					line-height: 28px;
+				}
+
+				@media (--phone-landscape-or-more) {
+					margin-bottom: 30px;
+					font-size: 65px;
+					line-height: 40px;
+
+					span {
+						font-size: 65px;
+						line-height: 40px;
+					}
+				}
+
+				@media (--desktop-small-or-more) {
+					font-size: 90px;
+					line-height: 60px;
+
+					span {
+						font-size: 90px;
+						line-height: 60px;
+					}
+				}
+			}
+
+			h3 {
+				font-weight: 600;
+				margin-bottom: 15px;
+				line-height: 25px;
+				font-size: 22px;
+
+				@media (--phone-landscape-or-more) {
+					line-height: 38px;
+					font-size: 32px;
+					margin-left: 40px;
+				}
+
+				@media (--tablet-landscape-or-more) {
+					line-height: 32px;
+					margin-left: 96px;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 25px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@media (--phone-landscape-or-more) {
+					max-width: 100%;
+					margin-left: 40px;
+				}
+
+				@media (--tablet-landscape-or-more) {
+					max-width: 440px;
+					margin-left: 96px;
+				}
+			}
+
+			.btn {
+				padding: 15px 10px;
+				text-align: center;
+
+				@media (--phone-landscape-or-more) {
+					padding: 25px 30px;
+					text-align: left;
+				}
+			}
+		}
+
+		@media (--tablet-landscape-or-more) {
+			justify-content: space-between;
+
+			.image,
+			.text {
+				order: initial;
+			}
+		}
+
+		&:last-child {
+			.text {
+				margin-bottom: 20px;
+
+				@media (--tablet-landscape-or-more) {
+					margin-bottom: 88px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,235 @@
+@import "styles/variables.pcss";
+
+/* Colors & Fonts from Figma. */
+$color-title-main: #2e2e38;
+$color-title-second: #2e2e38;
+$color-text-main: #2e2e38;
+$color-text-second: #2e2e38;
+$color-main:  #ef454e;
+$color-second: #1970b8;
+$color-invert: #f0f8ff;
+$color-elements: #d3d3d3;
+$color-light-background: #fff;
+
+@mixin text-style-title-main {
+	font-size: 24px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-title-second {
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-normal {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-normal-italic {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-normal-underline {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-main-normal-italic-underline {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-main-bold {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-bold-italic {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-bold-underline {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-main-bold-italic-underline {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-main-light {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-light-italic {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: italic;
+	text-decoration: none;
+}
+
+@mixin text-style-text-main-light-underline {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-main-light-italic-underline {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-second-normal {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-second-normal-italic {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	text-decoration: none;
+}
+
+@mixin text-style-text-second-normal-underline {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-second-normal-italic-underline {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-second-bold {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-second-bold-italic {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: none;
+}
+
+@mixin text-style-text-second-bold-underline {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-second-bold-italic-underline {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-second-light {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-text-second-light-italic {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: italic;
+	text-decoration: none;
+}
+
+@mixin text-style-text-second-light-underline {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	text-decoration: underline;
+}
+
+@mixin text-style-text-second-light-italic-underline {
+	font-size: 14px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: lighter;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+@mixin text-style-button-main {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	text-decoration: none;
+}
+
+@mixin text-style-button-second {
+	font-size: 16px;
+	font-family: "Work Sans", helvetica, arial, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	text-decoration: none;
+}

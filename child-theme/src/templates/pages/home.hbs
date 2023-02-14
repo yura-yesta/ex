@@ -1,0 +1,71 @@
+<section class="section-banner">
+	<img src="/images/banner-home.png" alt="" class="object-fit object-fit-cover">
+	<img src="/images/banner-home-mobile.png" alt="" class="object-fit object-fit-cover banner-mobile">
+	<div class="inner">
+		<h1 class="title">Discover how to win scholarships</h1>
+		<p>Search our database of 1.9+ million scholarships, and get tips and strategies to win them.</p>
+		<form class="form-search">
+			<label for="search">Start your search now</label>
+			<div class="search">
+				<input type="search" id="search" placeholder="College, major, location, or keyword...">
+			</div>
+			<button type="submit">Search</button>
+		</form>
+	</div>
+</section>
+
+<section class="section-search-home">
+	<div class="inner">
+		<h2 class="title">SIGN UP for a weekly newsletter on all thing scholarships.</h2>
+		<h3>Get scholarship tips and news.</h3>
+		<div class="form-subscribe">
+			{{#>gravityFormForm customClass="horizontal"}}
+				{{#>gravityFormBody}}
+					{{>gravityFormEmail labelText="Your email address"}}
+				{{/gravityFormBody}}
+				{{>gravityFormFooter buttonText="Subscribe"}}
+			{{/gravityFormForm}}
+		</div>
+	</div>
+</section>
+
+<section class="section-get-info">
+	<div class="inner">
+		<div class="wrapper">
+			<div class="image">
+				<img src="/images/get-info-img1.png" alt="">
+			</div>
+			<div class="text">
+				<h2 class="title">Scholarship<span>Guide</span></h2>
+				<h3>The ultimate <br> scholarship guide</h3>
+				<p>If you have questions about how to find and win scholarships, then you have come to the right place.
+					Learn tips to submit a top-notch application and increase your chances of winning.</p>
+				<p><a href="#" class="btn">GET THE FREE SCHOLARSHIP GUIDE</a></p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="text">
+				<h2 class="title">Scholarship<span>Essay Guide</span></h2>
+				<h3>The complete guide on writing scholarship essays</h3>
+				<p>Learn some top do’s and don’ts to craft an essay that will allow you to stand out from the crowd.</p>
+				<p><a href="#" class="btn">GET THE FREE ESSAY GUIDE</a></p>
+			</div>
+			<div class="image">
+				<img src="/images/get-info-img2.png" alt="">
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="image">
+				<img src="/images/get-info-img3.png" alt="">
+			</div>
+			<div class="text">
+				<h2 class="title">Scholarship<span>Interview</span>Guide</h2>
+				<h3>The complete guide to prepare you for your scholarship interview</h3>
+				<p>Learn how to answer the most common scholarship questions and ace the interview</p>
+				<p><a href="#" class="btn">GET THE FREE INTERVIEW GUIDE</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+{{>latestBlog}}

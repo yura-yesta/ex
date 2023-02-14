@@ -1,0 +1,99 @@
+{
+    "key": "group_61f3f85d375cb",
+    "title": "FC: Scholarship",
+    "fields": [
+        {
+            "key": "field_620287b549d18",
+            "label": "Main Title",
+            "name": "main-title",
+            "type": "title",
+            "instructions": "[ ] - span\r\n{ }  - strong",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "replace": "[:span:] , {:strong:}",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "default_level": 0
+        },
+        {
+            "key": "field_620270dcf6675",
+            "label": "Title",
+            "name": "title",
+            "type": "title",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "replace": "",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 1,
+            "default_level": 2
+        },
+        {
+            "key": "field_61f3f85e181c6",
+            "label": "Scholarship",
+            "name": "scholarship",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 1,
+            "theme_height": ""
+        },
+        {
+            "key": "field_62025dcc077cb",
+            "label": "Button",
+            "name": "button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "theme_any",
+                "operator": "=="
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1644333992
+}

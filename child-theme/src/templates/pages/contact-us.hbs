@@ -1,0 +1,31 @@
+<section class="section-contact-us">
+	<div class="inner">
+		<div class="wrapper">
+			<div class="left">
+				<h1 class="title">Contact <span>Us</span></h1>
+				<p>Want to contact us? Send us a message and we will get back to you as quickly as possible. If you are reporting a technical issue please be as specific as possible including what page you are on and browser information.</p>
+				<div class="img">
+					<img src="/images/contact-us-img.jpeg" alt="">
+				</div>
+			</div>
+			<div class="right">
+				<h3>Do you want to say something?</h3>
+				<p>Describe who you are so we can help you</p>
+
+				{{#>gravityFormForm}}
+					{{#>gravityFormBody}}
+						{{>gravityFormSingleLineText labelText="First name" customClass="w-50"}}
+						{{>gravityFormSingleLineText labelText="Last name" customClass="w-50"}}
+						{{>gravityFormEmail labelText="Email" customClass="w-50"}}
+						{{>gravityFormDropdown labelText="I AM A:" customClass="w-50"}}
+						{{>gravityFormDropdown labelText="How can we help you today"}}
+						{{>gravityFormParagraphText labelText="Your Message" customClass="paragraph"}}
+					{{/gravityFormBody}}
+					{{>gravityFormFooter buttonText="Update"}}
+				{{/gravityFormForm}}
+			</div>
+		</div>
+	</div>
+</section>
+
+{{>latestBlog}}

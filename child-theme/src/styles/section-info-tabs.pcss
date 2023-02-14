@@ -1,0 +1,253 @@
+@import "styles/variables.pcss";
+
+.section-info-tabs {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@media (--tablet-landscape-or-more) {
+		padding-top: 30px;
+		padding-bottom: 100px;
+	}
+
+	.inner {
+		max-width: 920px !important;
+	}
+
+	.tabs-nav {
+		gap: 10px;
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+
+		@media (--tablet-landscape-or-more) {
+			margin-bottom: 30px;
+		}
+
+		a,
+		.button,
+		.go-back button{
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+			color: #606060;
+			padding: 10px 17px;
+			background: #f3f3f3;
+			border-radius: 4px;
+			text-transform: none;
+			border: none;
+			cursor: pointer;
+
+			&.like {
+				padding-left: 32px;
+				position: relative;
+				display: inline-block;
+
+				&::before {
+					position: absolute;
+					content: " ";
+					background-image: url(images/heart-icon.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 12px;
+					width: 12px;
+					height: 12px;
+				}
+
+				&:hover {
+					&::before {
+						background-image: url(images/heart-icon-white.png);
+					}
+				}
+			}
+
+			&.active {
+				&::before {
+					background-image: url(images/heart-icon-like.png);
+				}
+			}
+
+			&:hover,
+			&.active-hover {
+				font-size: 16px;
+				line-height: 19px;
+				color: #fff;
+				background: #ef454e;
+				border-radius: 4px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.tab {
+		.item {
+			background: #fff;
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+			margin-bottom: 20px;
+			padding: 15px;
+
+			@media (--tablet-landscape-or-more) {
+				padding: 40px 40px 30px;
+			}
+
+			h3 {
+				margin-top: 0;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 23px;
+				color: #000;
+				margin-bottom: 10px;
+			}
+
+			h4 {
+				margin-top: 5px;
+				margin-bottom: 10px;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 22px;
+				color: #ef454e;
+			}
+
+			p {
+				margin-top: 0;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 22px;
+				color: #000;
+				margin-bottom: 10px;
+			}
+
+			.list {
+				padding: 0;
+				margin: 0;
+				display: block;
+
+				li {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 28px;
+					color: #000;
+					width: auto;
+					padding-left: 24px;
+					position: relative;
+
+					&::before {
+						position: absolute;
+						content: " ";
+						left: 0;
+						top: 6px;
+						width: 16px;
+						height: 16px;
+						background-image: url(images/checkbox-icon.svg);
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-color: #ffbf43;
+						border: none;
+						box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+						border-radius: 4px;
+					}
+				}
+			}
+
+			.checkbox {
+				margin-bottom: 8px;
+
+				@media (--tablet-landscape-or-more) {
+					margin-bottom: 0;
+				}
+
+				label {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 19px;
+					color: #000;
+					position: relative;
+					padding-left: 24px;
+					cursor: pointer;
+					margin-bottom: 0;
+					text-transform: none;
+
+					&::before {
+						position: absolute;
+						content: " ";
+						left: 0;
+						top: 2px;
+						width: 16px;
+						height: 16px;
+						border: 0.7px solid #1a1a1a;
+						box-sizing: border-box;
+						border-radius: 4px;
+					}
+				}
+
+				input {
+					display: none;
+				}
+
+				input:checked + label {
+					&::before {
+						background-image: url(images/checkbox-icon.svg);
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-color: #ffbf43;
+						border: none;
+						box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+						border-radius: 4px;
+					}
+				}
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+				margin-top: 5px;
+				display: flex;
+				flex-wrap: wrap;
+
+				li {
+					width: 100%;
+
+					@media (--phone-landscape-or-more) {
+						width: 50%;
+					}
+
+					@media (--tablet-landscape-or-more) {
+						width: 33%;
+					}
+
+					h5 {
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 22px;
+						color: #000;
+						margin-top: 0;
+						margin-bottom: 10px;
+					}
+
+					h6 {
+						font-weight: 300;
+						font-size: 14px;
+						line-height: 16px;
+						color: #ef454e;
+						margin-top: 3px;
+						margin-bottom: 10px;
+					}
+
+					p,
+					a {
+						font-weight: 300;
+						font-size: 16px;
+						line-height: 22px;
+						color: #000;
+						margin-top: 0;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}

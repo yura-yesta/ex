@@ -1,0 +1,152 @@
+@import "styles/variables.pcss";
+
+.section-banner {
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 374px;
+	background: #ffbf43;
+	overflow: hidden;
+
+	@media (--phone-landscape-or-more) {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+
+	@media (--tablet-landscape-or-more) {
+		padding-top: 74px;
+		padding-bottom: 153px;
+	}
+
+	.object-fit {
+		display: none;
+
+		@media (--phone-landscape-or-more) {
+			display: block;
+			opacity: 0.5;
+		}
+
+		@media (--tablet-landscape-or-more) {
+			opacity: 1;
+		}
+
+		&.banner-mobile {
+			display: block;
+			position: absolute;
+			opacity: 1;
+			object-fit: fill;
+
+			@media (--phone-landscape-or-more) {
+				display: none;
+			}
+		}
+	}
+
+	.title {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 40px;
+		margin: 0 auto 15px;
+		max-width: 302px;
+		text-align: center;
+
+		@media (--phone-medium-portrait-or-more) {
+			font-size: 36px;
+			line-height: 42px;
+		}
+
+		@media (--phone-landscape-or-more) {
+			max-width: 100%;
+			font-size: 35px;
+			line-height: 40px;
+			text-align: left;
+			margin: 0 0 15px;
+		}
+
+		@media (--tablet-landscape-or-more) {
+			font-size: 60px;
+			line-height: 70px;
+			margin-bottom: 20px;
+			max-width: 502px;
+		}
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 28px;
+		margin: 0 auto 50px;
+		max-width: 320px;
+		text-align: center;
+
+		@media (--phone-landscape-or-more) {
+			max-width: 100%;
+			margin: 0 0 40px;
+			text-align: left;
+		}
+
+		@media (--tablet-landscape-or-more) {
+			font-size: 22px;
+			line-height: 32px;
+			max-width: 530px;
+			margin-bottom: 60px;
+		}
+	}
+
+	.form-search {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		@media (--phone-landscape-or-more) {
+			position: relative;
+			max-width: 510px;
+			padding: 0;
+			margin-bottom: 20px;
+		}
+
+		label {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 21px;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			display: block;
+			text-align: center;
+
+			@media (--phone-landscape-or-more) {
+				text-align: left;
+			}
+		}
+
+		input,
+		input[type="search"] {
+			border: none;
+			border-radius: 0 !important;
+			width: 100%;
+			padding: 25px 22px;
+			-webkit-appearance: none;
+
+			&::placeholder {
+				border-radius: 0;
+			}
+
+			@media (--phone-landscape-or-more) {
+				padding: 30px 160px 30px 30px;
+			}
+		}
+
+		button {
+			width: 100%;
+
+			@media (--phone-landscape-or-more) {
+				padding: 26px 42px 25px;
+				position: absolute;
+				top: 46px;
+				right: 5px;
+				width: auto;
+			}
+
+			@media (--tablet-landscape-or-more) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+@import "styles/variables.pcss";
+@import "styles/mixins";
+@import "styles/global-forms.pcss";
+
+form {
+	:--fields {
+		background: #fff;
+		border-radius: 4px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		padding: 25px 30px;
+		margin-bottom: 5px;
+
+		@media (--tablet-portrait-or-more) {
+			margin-bottom: 0;
+		}
+	}
+
+	:--labels {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 19px;
+	}
+
+	.gfield_radio {
+		:--labels {
+			font-size: 16px;
+		}
+	}
+}
+
+.gform_wrapper {
+	.gfield {
+		label {
+			left: 30px;
+		}
+	}
+
+	.gform_button {
+		width: 100%;
+
+		@media (--phone-landscape-or-more) {
+			width: auto;
+		}
+	}
+}
+

@@ -1,0 +1,122 @@
+<header id="page-header">
+	<div class="login-header">
+		{{>menu menus.headerSecond}}
+	</div>
+	<div class="inner">
+		{{>logo image="/images/logo.png"}}
+		{{>menu menus.headerMain}}
+		{{>openMobileMenuButton}}
+	</div>
+</header>
+
+
+<div id="login-popup" class="mfp-hide">
+	<h2 class="title">Please Login</h2>
+	<h3>Please enter your email and password</h3>
+	{{#>gravityFormForm customClass="horizontal"}}
+		{{#>gravityFormBody}}
+			{{>gravityFormEmail labelText="Enter your email"}}
+			{{>gravityFormSingleLineText labelText="Enter your password"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="Login"}}
+	{{/gravityFormForm}}
+	<h4><a href="#forgot-popup" class="popup-link">Forgot your password?</a></h4>
+	<h4><a href="#must-be-a-user-popup" class="popup-link">Register</a></h4>
+</div>
+
+<div id="forgot-popup" class="mfp-hide">
+	<h2 class="title">Password recovery</h2>
+	<h3>Send password recovery to the email</h3>
+	{{#>gravityFormForm customClass="horizontal"}}
+		{{#>gravityFormBody}}
+			{{>gravityFormEmail labelText="Enter your email"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="Send"}}
+	{{/gravityFormForm}}
+	<h4><a href="#login-popup" class="popup-link">Go back to login</a></h4>
+</div>
+
+<div id="must-be-a-user-popup" class="mfp-hide">
+	<h2 class="title">You must be a user to view this content...</h2>
+	<h3>Already have an account?  <a href="#login-popup" class="popup-link">Log in here</a></h3>
+	{{#>gravityFormForm}}
+		{{#>gravityFormBody}}
+			{{#>gravityFormRadioButtons
+				hideLabel=false
+				labelText="I AM A:"
+				required=true
+				enableOtherChoice=false
+				customClass="radiobuttons"
+			}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Student"
+					checked=false
+				}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Parent"
+					checked=false
+				}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Counselor"
+					checked=false
+				}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Other"
+					checked=false
+				}}
+			{{/gravityFormRadioButtons}}
+			{{>gravityFormSingleLineText labelText="First Name"}}
+			{{>gravityFormSingleLineText labelText="Last Name"}}
+			{{>gravityFormEmail labelText="Email Address"}}
+			{{>gravityFormSingleLineText labelText="Password"}}
+			{{>gravityFormSingleLineText labelText="Confirm Password"}}
+			{{>gravityFormDropdown labelText="School"}}
+			{{>gravityFormDropdown labelText="Current Grade/Year in School"}}
+			{{#>gravityFormCheckboxes
+				hideLabel=false
+				labelText="SUBSCRIBE:"
+				required=true
+				customClass="checkbox"
+			}}
+			{{/gravityFormCheckboxes}}
+			{{#>gravityFormCheckboxes
+				hideLabel=true
+				required=true
+				customClass="checkbox label-hidden"
+				descriptionText="A weekly newsletter with scholarship updates and news."
+			}}
+				{{>gravityFormCheckboxesCheckbox
+					labelText="Scholarship Plus"
+					checked=true
+				}}
+			{{/gravityFormCheckboxes}}
+			{{#>gravityFormCheckboxes
+				hideLabel=true
+				required=true
+				customClass="checkbox label-hidden"
+				descriptionText="A monthly newsletter with all the latest in college admissions news, including strategies for success in college."
+			}}
+				{{>gravityFormCheckboxesCheckbox
+					labelText="College Plus"
+					checked=true
+				}}
+			{{/gravityFormCheckboxes}}
+			{{>gravityFormDropdown descriptionText="How did you hear about us:" customClass="select-description"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter
+			buttonText="Join"
+			beforeInputText="<p>By clicking &#8243;Join&#8243;, I agree to the <a href=#>Terms & Conditions</a></p>"
+		}}
+	{{/gravityFormForm}}
+</div>
+
+<div id="search-popup" class="mfp-hide">
+	<form class="is-search-form" role="search">
+		<label for="is-search-input-260">
+			<input type="search" value="" class="is-search-input" placeholder="Search here...">
+		</label>
+		<button type="submit" class="is-search-submit">
+			<span class="is-screen-reader-text">Search Button</span>
+		</button>
+	</form>
+</div>

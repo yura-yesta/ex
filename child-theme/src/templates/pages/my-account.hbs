@@ -1,0 +1,49 @@
+<section class="section-my-account">
+	<div class="inner">
+		<div class="wrapper">
+			<div class="left">
+				<div class="img">
+					<img src="https://www.petersons.com/images/user-icon.svg" alt="">
+				</div>
+				<h5>Name Account</h5>
+				<ui class="list">
+					<li><a href="#profile-info">Profile Info</a></li>
+					<li><a href="#order-history">Wishlist</a></li>
+					<li><a href="">Log out</a></li>
+				</ui>
+			</div>
+			<div class="right">
+				<div class="profile-info">
+					<h2>Profile Info</h2>
+					<h3>First name: <strong>Name</strong></h3>
+					<h3>Last name: <strong>Account</strong></h3>
+					<h3>Email: <strong>test1234@gmail.com</strong></h3>
+				</div>
+				<p><a href="#edit-profile-popup" class="popup-link">Edit profile</a></p>
+				<p><a href="#delete-account-popup" class="popup-link">Delete account</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="edit-profile-popup" class="mfp-hide">
+	<h2 class="title">Edit profile</h2>
+	<h3>Enter your profile information</h3>
+
+	{{#>gravityFormForm}}
+		{{#>gravityFormBody}}
+			{{>gravityFormSingleLineText labelText="First name"}}
+			{{>gravityFormSingleLineText labelText="Last name"}}
+			{{>gravityFormEmail labelText="Email"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="Update"}}
+	{{/gravityFormForm}}
+</div>
+
+<div id="delete-account-popup" class="mfp-hide">
+	<h2 class="title">Delete account</h2>
+	<h3>Are you sure you want to delete?<br/><strong>It will be impossible to restore the account</strong></h3>
+	<div class="button-center">
+		<button class="btn">I want to delete</button>
+	</div>
+</div>

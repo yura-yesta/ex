@@ -1,0 +1,41 @@
+<div class="bg-popup"> <!-- class="hidden-popup" (display:none) -->
+	<div id="sharing-your-grade">
+		<div class="close"></div>
+		<h2 class="title">By sharing your grade or role,</h2>
+		<p>it will help us to provide you with relevant<br/>scholarship and financial aid information</p>
+		{{#>gravityFormForm}}
+			{{#>gravityFormBody}}
+				{{>gravityFormEmail labelText="Email Address"}}
+				{{>gravityFormDropdown labelText="Current Grade/Year in School"}}
+				{{#>gravityFormRadioButtons
+					hideLabel=false
+					labelText="I AM A:"
+					required=true
+					enableOtherChoice=false
+					customClass="radiobuttons"
+				}}
+					{{>gravityFormRadioButtonsCheckbox
+						labelText="Student"
+						checked=false
+					}}
+					{{>gravityFormRadioButtonsCheckbox
+						labelText="Parent"
+						checked=false
+					}}
+					{{>gravityFormRadioButtonsCheckbox
+						labelText="Counselor"
+						checked=false
+					}}
+					{{>gravityFormRadioButtonsCheckbox
+						labelText="Other"
+						checked=false
+					}}
+				{{/gravityFormRadioButtons}}
+			{{/gravityFormBody}}
+			{{>gravityFormFooter
+				buttonText="SUBMIT"
+				beforeInputText="<p>By clicking &#8243;Submit&#8243;, I agree to the <a href=#>Terms & Conditions</a></p>"
+			}}
+		{{/gravityFormForm}}
+	</div>
+</div>

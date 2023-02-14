@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{pageTitle}}</title>
+	<script>
+		const theme = {
+			'url': '/',
+			'ajaxUrl': '/wp-admin/admin-ajax.php',
+			'ajaxNonce': '',
+			'googleMapsApiKey': 'AIzaSyC1BgSVg5b7vMGqbjalTl_0Rb9LmsrMpWE'
+		};
+		const themeI18n = { 'more': 'View More', 'less': 'View Less' };
+	</script>
+	<link
+		href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARARAAAAAAABEBEQAAAAAQEQAREAAAARABEAERAAAREAEQABEQAREAARAAAREBEQAAEQAAERAREAARAAERAAERABEAERAAABEQARARAAAAAREBEBAAAAAAEQEQAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAPk/AAD5HwAA6Y8AAMzHAACM4wAAHPEAAB54AACOcQAAxmMAAOMnAADxLwAA+T8AAP//AAD//wAA"
+		rel="icon" type="image/x-icon">
+</head>
+<body{{>bodyClass}}>
+	<a class="skip-link screen-reader-text" href="#page-main">Skip to content</a>
+	{{>header}}
+	{{>blockBreadcrumb}}
+	<main id="page-main">
+		{{>body}}
+	</main>
+	{{>footer}}
+	{{>mobileMenu}}
+	{{>cookiesNotice}}
+</body>
+</html>

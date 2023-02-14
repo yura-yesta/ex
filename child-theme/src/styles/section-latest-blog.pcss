@@ -1,0 +1,115 @@
+@import "styles/variables.pcss";
+
+.section-latest-blog {
+	background: #fff8ec;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@media (--tablet-landscape-or-more) {
+		padding-top: 120px;
+		padding-bottom: 122px;
+	}
+
+	.title {
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 32px;
+		text-align: center;
+		margin-bottom: 30px;
+
+		@media (--tablet-landscape-or-more) {
+			margin-bottom: 50px;
+		}
+	}
+
+	.wrapper {
+		display: grid;
+		gap: 4px;
+		padding: 0 2px;
+		grid-auto-rows: 296px;
+
+		@media (--phone-landscape-or-more) {
+			grid-template: 296px / 1fr 1fr;
+		}
+
+		@media (--tablet-landscape-or-more) {
+			grid-template: "left center center right" 296px / 24.95711835334477% 1fr 1fr 24.95711835334477%;
+			grid-auto-flow: dense;
+		}
+
+		.item {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			color: #fff;
+			border-radius: 2px;
+			padding: 28px 22px;
+
+			&:first-child:not(:last-child):nth-last-child(1n+4) {
+				@media (--phone-landscape-or-more) {
+					grid-area: span 1 / span 2;
+
+					/*
+					todo:
+					 Ask if it is appropriate to put the styles for the .date and .title
+					 here rather than in the rules themselves
+					*/
+					.date {
+						font-weight: 500;
+						font-size: 12px;
+						line-height: 14px;
+					}
+
+					.title {
+						font-size: 28px;
+						line-height: 38px;
+					}
+				}
+
+				@media (--tablet-landscape-or-more) {
+					grid-area: span 2 / center;
+					padding: 38px 113px;
+				}
+			}
+
+			&::after {
+				position: absolute;
+				content: " ";
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				opacity: 0.3;
+				transition: opacity 0.1s ease-in-out;
+				pointer-events: none;
+			}
+
+			&:hover::after {
+				opacity: 0.6;
+				transition: opacity 0.1s ease-in-out;
+			}
+		}
+
+		.date {
+			position: relative;
+			z-index: 1;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 14px;
+		}
+
+		.title {
+			position: relative;
+			z-index: 1;
+			font-size: 18px;
+			line-height: 26px;
+			margin-top: 5px;
+			margin-bottom: 0;
+			color: #fff;
+		}
+	}
+}

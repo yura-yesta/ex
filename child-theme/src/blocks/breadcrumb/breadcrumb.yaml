@@ -1,0 +1,8 @@
+needShow: true
+included:
+  - scholarship-interview-guide
+  - scholarship-guide
+  - scholarship-essay-guide
+  - inner-page
+excluded:
+  - home

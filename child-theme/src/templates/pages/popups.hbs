@@ -1,0 +1,150 @@
+<div class="inner">
+	<a href="#what-school-popup" class="popup-link">Popup (Pop-up)</a>
+	<br/>
+	<a href="#must-be-a-user-popup" class="popup-link">Registration (Pop-up)</a>
+	<br/>
+	<a href="#login-popup" class="popup-link">Login (Pop-up)</a>
+	<br/>
+	<a href="#forgot-popup" class="popup-link">Forgot (Pop-up)</a>
+	<br/>
+	<a href="#edit-profile-popup" class="popup-link">Edit profile (Pop-up)</a>
+	<br/>
+	<a href="#delete-account-popup" class="popup-link">Delete account (Pop-up)</a>
+	<br/>
+</div>
+
+<div id="login-popup" class="mfp-hide">
+	<h2 class="title">Please Login</h2>
+	<h3>Please enter your email and password</h3>
+	{{#>gravityFormForm customClass="horizontal"}}
+		{{#>gravityFormBody}}
+			{{>gravityFormEmail labelText="Enter your email"}}
+			{{>gravityFormSingleLineText labelText="Enter your password"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="Login"}}
+	{{/gravityFormForm}}
+	<h4><a href="#forgot-popup" class="popup-link">Forgot your password?</a></h4>
+	<h4><a href="#must-be-a-user-popup" class="popup-link">Register</a></h4>
+</div>
+
+<div id="forgot-popup" class="mfp-hide">
+	<h2 class="title">Password recovery</h2>
+	<h3>Send password recovery to the email</h3>
+	{{#>gravityFormForm customClass="horizontal"}}
+		{{#>gravityFormBody}}
+			{{>gravityFormEmail labelText="Enter your email"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="Send"}}
+	{{/gravityFormForm}}
+	<h4><a href="#login-popup" class="popup-link">Go back to login</a></h4>
+</div>
+
+<div id="must-be-a-user-popup" class="mfp-hide">
+	<h2 class="title">You must be a user to view this content...</h2>
+	<h3>Already have an account?  <a href="#login-popup" class="popup-link">Log in here</a></h3>
+	{{#>gravityFormForm}}
+		{{#>gravityFormBody}}
+			{{#>gravityFormRadioButtons
+				hideLabel=false
+				labelText="I AM A:"
+				required=true
+				enableOtherChoice=false
+				customClass="radiobuttons"
+			}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Student"
+					checked=false
+				}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Parent"
+					checked=false
+				}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Counselor"
+					checked=false
+				}}
+				{{>gravityFormRadioButtonsCheckbox
+					labelText="Other"
+					checked=false
+				}}
+			{{/gravityFormRadioButtons}}
+			{{>gravityFormSingleLineText labelText="First Name"}}
+			{{>gravityFormSingleLineText labelText="Last Name"}}
+			{{>gravityFormEmail labelText="Email Address *" required=true}}
+			{{>gravityFormSingleLineText labelText="Password *" required=true}}
+			{{>gravityFormSingleLineText labelText="Confirm Password *" required=true}}
+			{{>gravityFormDropdown labelText="School"}}
+			{{>gravityFormDropdown labelText="Current Grade/Year in School"}}
+			{{#>gravityFormCheckboxes
+				hideLabel=false
+				labelText="SUBSCRIBE:"
+				required=true
+				customClass="checkbox"
+			}}
+			{{/gravityFormCheckboxes}}
+			{{#>gravityFormCheckboxes
+				hideLabel=true
+				required=true
+				customClass="checkbox label-hidden"
+				descriptionText="A weekly newsletter with scholarship updates and news."
+			}}
+				{{>gravityFormCheckboxesCheckbox
+					labelText="Scholarship Plus"
+					checked=true
+				}}
+			{{/gravityFormCheckboxes}}
+			{{#>gravityFormCheckboxes
+				hideLabel=true
+				required=true
+				customClass="checkbox label-hidden"
+				descriptionText="A monthly newsletter with all the latest in college admissions news, including strategies for success in college."
+			}}
+				{{>gravityFormCheckboxesCheckbox
+					labelText="College Plus"
+					checked=true
+				}}
+			{{/gravityFormCheckboxes}}
+			{{>gravityFormDropdown descriptionText="How did you hear about us:" customClass="select-description"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter
+			buttonText="Join"
+			beforeInputText="<p>By clicking &#8243;Join&#8243;, I agree to the <a href=#>Terms & Conditions</a></p>"
+		}}
+	{{/gravityFormForm}}
+</div>
+
+<div id="what-school-popup" class="mfp-hide">
+	<h2 class="title">Not sure what school <br/>is right for you?</h2>
+	<h3>Subscribe below to receive our free <a href="#">Ultimate Scholarship Guide</a></h3>
+	<div class="img">
+		<img src="/images/a4-images.png" alt="#">
+	</div>
+	{{#>gravityFormForm customClass="horizontal"}}
+		{{#>gravityFormBody}}
+			{{>gravityFormEmail labelText="Enter your email"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="send it to me"}}
+	{{/gravityFormForm}}
+</div>
+
+<div id="edit-profile-popup" class="mfp-hide">
+	<h2 class="title">Edit profile</h2>
+	<h3>Enter your profile information</h3>
+
+	{{#>gravityFormForm}}
+		{{#>gravityFormBody}}
+			{{>gravityFormSingleLineText labelText="First name"}}
+			{{>gravityFormSingleLineText labelText="Last name"}}
+			{{>gravityFormEmail labelText="Email"}}
+		{{/gravityFormBody}}
+		{{>gravityFormFooter buttonText="Update"}}
+	{{/gravityFormForm}}
+</div>
+
+<div id="delete-account-popup" class="mfp-hide">
+	<h2 class="title">Delete account</h2>
+	<h3>Are you sure you want to delete?<br/><strong>It will be impossible to restore the account</strong></h3>
+	<div class="button-center">
+		<button class="btn">I want to delete</button>
+	</div>
+</div>

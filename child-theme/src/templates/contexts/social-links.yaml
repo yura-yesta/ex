@@ -1,0 +1,9 @@
+global:
+    items:
+        -   icon: facebook.svg
+            title: Facebook
+            href: https://facebook.com/
+        -   icon: pinterest.svg
+            title: Pinterest
+        -   icon: twitter.svg
+            title: Twitter

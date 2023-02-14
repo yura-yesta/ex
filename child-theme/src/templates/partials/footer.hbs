@@ -1,0 +1,32 @@
+<footer id="page-footer">
+	<div class="top">
+		<div class="inner">
+			<div class="left">
+				{{>logo image="/images/flogo.png"}}
+				{{>menu menus.footerMain}}
+				{{>socialLinks socialLinks.global}}
+			</div>
+			<div class="right">
+				<h3>Subscribe to our newsletter.</h3>
+				<p>Receive a weekly newsletter with free scholarship tips and money-saving hacks to help you pay less for college.</p>
+				<div class="form-subscribe">
+					{{#>gravityFormForm customClass="horizontal"}}
+						{{#>gravityFormBody}}
+							{{>gravityFormEmail labelText="Your email address"}}
+						{{/gravityFormBody}}
+						{{>gravityFormFooter buttonText="Subscribe"}}
+					{{/gravityFormForm}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="inner">
+			<div class="links">
+				{{>copyright text="© Copyright 2021 - Set For College, LLC. All rights reserved"}}
+				{{>menu menus.footerLinks}}
+			</div>
+			{{>by title="Dallas WordPress Development:" href="https://www.webloftdesigns.com/" name="Web Loft Designs"}}
+		</div>
+	</div>
+</footer>

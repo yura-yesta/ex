@@ -1,0 +1,71 @@
+headerSecond:
+    nav: false
+    id: menu-header-second
+    items:
+        -   title: Sign-in
+            href: '#login-popup'
+            class: popup-link sign-in
+        -   title: My Account
+            class: my-account
+            href: 'http://thecollegepod.devbucket.me/www/my-account.html'
+            items:
+                -   title: Profile Info
+                    href: 'http://thecollegepod.devbucket.me/www/my-account.html'
+                -   title: Saved Scholarships
+                    href: 'http://thecollegepod.devbucket.me/www/my-account.html'
+                -   title: Logout
+                    href: 'http://thecollegepod.devbucket.me/www/home.html'
+
+headerMain:
+    nav: true
+    id: menu-header-main
+    items:
+        -   title: Free Guides
+            href: 'http://thecollegepod.devbucket.me/www/inner-page.html'
+        -   title: Blog
+            href: 'http://thecollegepod.devbucket.me/www/defaults/blog-posts.html'
+            items:
+                -   title: Scholarships
+                    href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+                -   title: Financial Aid
+                    href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+                -   title: Student Loans
+                    href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+                -   title: College Admissions
+                    href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+                -   title: Campus Life
+                    href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+            class: current-menu-item
+        -   title: About Us
+            href: 'http://thecollegepod.devbucket.me/www/about-us.html'
+        -   title: Contact Us
+            href: 'http://thecollegepod.devbucket.me/www/contact-us.html'
+        -   title: Search Button
+            href: '#search-popup'
+            class: popup-link search
+        -   title: Search Scholarships
+            class: btn-custom
+            href: 'http://thecollegepod.devbucket.me/filter/'
+
+footerMain:
+    nav: true
+    id: menu-footer-main
+    items:
+        -   title: College Admissions
+            href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+        -   title: Financial Aid
+            href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+        -   title: Campus Life
+            href: 'http://thecollegepod.devbucket.me/www/defaults/blog-post.html'
+        -   title: Scholarship Search
+            href: 'http://thecollegepod.devbucket.me/filter/'
+
+footerLinks:
+    id: menu-footer-links
+    items:
+        - title: Privacy Policy
+          href: 'http://thecollegepod.devbucket.me/www/defaults/privacy-policy.html'
+        - title: Search results
+          href: 'http://thecollegepod.devbucket.me/www/defaults/search-results.html'
+        - title: Site map
+          href: 'http://thecollegepod.devbucket.me/www/defaults/site-map.html'
