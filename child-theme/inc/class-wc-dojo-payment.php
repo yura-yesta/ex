@@ -29,7 +29,6 @@ class WC_Dojo_Payment{
 
     public static function connectE_ajax()
     {
-
         switch ($_POST['method']) {
             case 'check_order':
                 echo self::check_order();
@@ -112,7 +111,6 @@ class WC_Dojo_Payment{
         if($_POST['status'] === 'payment_success') {
 
             $md = $_POST['md'];
-            //return json_encode([$_POST, ['user_id' => $user_id, 'amount' => $amount], json_encode(WC()->session->get('cart'))]);
 
             return $wpdb->update('wp_enapps_wc_payments',
                 [
